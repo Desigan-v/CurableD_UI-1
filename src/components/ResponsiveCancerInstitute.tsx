@@ -5,7 +5,6 @@ import './ResponsiveCancerInstitute.css';
 import { useNavigate } from 'react-router-dom';
 
 const ResponsiveCancerInstitute: React.FC = () => {
-  // State for sidebar visibility
   const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(false);
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
   

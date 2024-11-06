@@ -15,14 +15,13 @@ const ResponsiveCancerInstitute: React.FC = () => {
     navigate('/');
   };
 
-  // Function to handle navigation, including going to a different port
   const handleNavigate = (page: string) => {
     if (page === 'Outreach Clinic') {
-      window.location.href = '/HomePage'; // Navigates to http://localhost:3000/
-    } else if (page === 'Survey') {
-      navigate('/survey'); // Internal navigation within Next.js on port 3001
+      window.location.href = '/HomePage'; 
+    } 
+    else if (page === 'Survey') {
+      navigate('/survey'); 
     }
-    // Add more conditions as needed for other pages
   };
 
   return (

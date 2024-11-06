@@ -7,12 +7,22 @@ import { useNavigate } from 'react-router-dom';
 const ResponsiveCancerInstitute: React.FC = () => {
   const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(false);
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
-  
-  const navigate = useNavigate(); 
-//for clear token
+
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/');
+  };
+
+  // Function to handle navigation, including going to a different port
+  const handleNavigate = (page: string) => {
+    if (page === 'Outreach Clinic') {
+      window.location.href = '/HomePage'; // Navigates to http://localhost:3000/
+    } else if (page === 'Survey') {
+      navigate('/survey'); // Internal navigation within Next.js on port 3001
+    }
+    // Add more conditions as needed for other pages
   };
 
   return (
@@ -65,7 +75,12 @@ const ResponsiveCancerInstitute: React.FC = () => {
       <main className="container-fluid mt-4">
         <div className="container-box d-flex flex-wrap justify-content-center">
           {['Outreach Clinic', 'Survey', 'Patient Registration', 'Screening', 'Referral To Hospital', 'Master Data Management'].map((title, index) => (
-            <div key={index} className="box">
+            <div
+              key={index}
+              className="box"
+              onClick={() => handleNavigate(title)}
+              style={{ cursor: 'pointer' }}
+            >
               <i className={`fas fa-${index % 2 === 0 ? 'clinic-medical' : 'poll'}`}></i>
               {title}
               <i className="fas fa-info-circle info-icon"></i>

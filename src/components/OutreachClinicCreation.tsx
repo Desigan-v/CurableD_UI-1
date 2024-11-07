@@ -178,7 +178,7 @@ const OutreachClinicCreation: React.FC = () => {
                 </label>
                 <label>
                     District Name:*
-                    <select value={district} onChange={(e) => handleDistrictChange(e.target.value)} required disabled={loadingDistricts}>
+                    <select value={district} onChange={(e) => handleDistrictChange(e.target.value)} required disabled={!state || loadingDistricts}>
                         <option value="">Select District</option>
                         {districts.map((district) => (
                             <option key={district.id} value={district.name}>
@@ -189,7 +189,7 @@ const OutreachClinicCreation: React.FC = () => {
                 </label>
                 <label>
                     Taluk Name:*
-                    <select value={taluk} onChange={(e) => handleTalukChange(e.target.value)} required disabled={loadingTaluks}>
+                    <select value={taluk} onChange={(e) => handleTalukChange(e.target.value)} required disabled={!district || loadingTaluks}>
                         <option value="">Select Taluk</option>
                         {taluks.map((taluk) => (
                             <option key={taluk.id} value={taluk.name}>
@@ -200,7 +200,7 @@ const OutreachClinicCreation: React.FC = () => {
                 </label>
                 <label>
                     Panchayat/Village Name:*
-                    <select value={panchayat} onChange={(e) => setPanchayat(e.target.value)} required disabled={loadingPanchayats}>
+                    <select value={panchayat} onChange={(e) => setPanchayat(e.target.value)} required disabled={!taluk || loadingPanchayats}>
                         <option value="">Select Panchayat/Village</option>
                         {panchayats.map((panchayat, index) => (
                             <option key={index} value={panchayat.name}>

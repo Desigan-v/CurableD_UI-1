@@ -37,7 +37,7 @@ const OutreachClinicInfo: React.FC = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container2">
             <header className="header">
                 <button className="back-button" onClick={handleBackClick}>Back</button>
                 <h1>Outreach Clinic Information</h1>

@@ -1,5 +1,5 @@
 /* Base container styling */
-.container {
+.container5 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +91,7 @@ h1 {
 
 /* Tablet screens */
 @media (max-width: 768px) {
-    .container {
+    .container5 {
         padding: 0 15px;
     }
 
@@ -116,7 +116,7 @@ h1 {
 
 /* Mobile screens */
 @media (max-width: 480px) {
-    .container {
+    .container5 {
         padding: 0 10px;
     }
 

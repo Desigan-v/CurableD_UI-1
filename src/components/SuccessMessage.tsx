@@ -5,7 +5,7 @@ const SuccessMessage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='container'>
+    <div className='container5'>
         <main className="content">
         <h1>New OutReach Clinic Has Been Created Successfully!</h1>
         <p>Outreach clinic ID:******</p>

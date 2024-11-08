@@ -39,7 +39,7 @@ const ResourcePlanning: React.FC = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container4">
       <header className="header">
                 <button className="back-button" onClick={() => navigate(-1)}>
                     <FontAwesomeIcon icon={faArrowLeft} /> Back

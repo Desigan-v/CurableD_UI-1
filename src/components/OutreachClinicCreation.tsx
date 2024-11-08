@@ -210,21 +210,20 @@ const OutreachClinicCreation: React.FC = () => {
                     </select>
                 </label>
                 <label>
-                    Outreach Clinic Start Date:*
+                    Outreach Clinic Start Date:
                     <input
                         type="date"
                         value={startDate}
                         onChange={(e) => setStartDate(e.target.value)}
-                        required
+                        
                     />
                 </label>
                 <label>
-                    Outreach Clinic End Date:*
+                    Outreach Clinic End Date:
                     <input
                         type="date"
                         value={endDate}
                         onChange={(e) => setEndDate(e.target.value)}
-                        required
                     />
                 </label>
                 <button type="submit" className="submit-button">

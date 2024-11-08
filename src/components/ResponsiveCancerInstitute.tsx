@@ -71,8 +71,8 @@ const ResponsiveCancerInstitute: React.FC = () => {
       </div>
 
       {/* Main Content with Boxes */}
-      <main className="container-fluid mt-4">
-        <div className="container-box d-flex flex-wrap justify-content-center">
+      <main className="container4-fluid mt-4">
+        <div className="container4-box d-flex flex-wrap justify-content-center">
           {['Outreach Clinic', 'Survey', 'Patient Registration', 'Screening', 'Referral To Hospital', 'Master Data Management'].map((title, index) => (
             <div
               key={index}
